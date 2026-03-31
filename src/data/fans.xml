@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>fans.xml</FileName>
+  <Version>1.3</Version>
+  <UserID>13358568</UserID>
+  <FetchedDate>2026-03-31 05:49:40</FetchedDate>
+  <Team>
+    <TeamID>2815981</TeamID>
+    <FanclubId>0</FanclubId>
+    <FanclubName></FanclubName>
+    <FanMood>8</FanMood>
+    <Members>902</Members>
+    <FanSeasonExpectation>1</FanSeasonExpectation>
+    <PlayedMatches>
+      <Match>
+        <MatchID>759785458</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2803172</AwayTeamID>
+          <AwayTeamName>machapicha</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2026-02-22 22:30:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>6</HomeGoals>
+        <AwayGoals>1</AwayGoals>
+        <FanMatchExpectation>6</FanMatchExpectation>
+        <FanMoodAfterMatch>10</FanMoodAfterMatch>
+        <Weather>1</Weather>
+        <SoldSeats>12000</SoldSeats>
+      </Match>
+      <Match>
+        <MatchID>759785461</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2741737</HomeTeamID>
+          <HomeTeamName>2deabril</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2026-03-01 22:30:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>2</HomeGoals>
+        <AwayGoals>8</AwayGoals>
+        <FanMatchExpectation>4</FanMatchExpectation>
+        <FanMoodAfterMatch>10</FanMoodAfterMatch>
+        <Weather>2</Weather>
+        <SoldSeats>12000</SoldSeats>
+      </Match>
+      <Match>
+        <MatchID>759785467</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2539181</AwayTeamID>
+          <AwayTeamName>RCD La Rioja</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2026-03-08 22:30:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>6</HomeGoals>
+        <AwayGoals>3</AwayGoals>
+        <FanMatchExpectation>6</FanMatchExpectation>
+        <FanMoodAfterMatch>10</FanMoodAfterMatch>
+        <Weather>2</Weather>
+        <SoldSeats>12200</SoldSeats>
+      </Match>
+      <Match>
+        <MatchID>759785468</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2779888</HomeTeamID>
+          <HomeTeamName>Athletico San Juan</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2026-03-15 22:30:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>1</HomeGoals>
+        <AwayGoals>10</AwayGoals>
+        <FanMatchExpectation>5</FanMatchExpectation>
+        <FanMoodAfterMatch>10</FanMoodAfterMatch>
+        <Weather>2</Weather>
+        <SoldSeats>8651</SoldSeats>
+      </Match>
+    </PlayedMatches>
+    <UpcomingMatches>
+      <Match>
+        <MatchID>762125412</MatchID>
+        <HomeTeam>
+          <HomeTeamID>3222912</HomeTeamID>
+          <HomeTeamName>Ñuñorco</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2026-04-01 23:10:00</MatchDate>
+        <MatchType>3</MatchType>
+        <FanMatchExpectation>5</FanMatchExpectation>
+      </Match>
+      <Match>
+        <MatchID>764903600</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2884438</HomeTeamID>
+          <HomeTeamName>Lugano caba fc</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2026-04-05 22:00:00</MatchDate>
+        <MatchType>1</MatchType>
+        <FanMatchExpectation>4</FanMatchExpectation>
+      </Match>
+      <Match>
+        <MatchID>764903601</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>3232441</AwayTeamID>
+          <AwayTeamName>los pamas</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2026-04-12 22:00:00</MatchDate>
+        <MatchType>1</MatchType>
+        <FanMatchExpectation>7</FanMatchExpectation>
+      </Match>
+    </UpcomingMatches>
+  </Team>
+</HattrickData>

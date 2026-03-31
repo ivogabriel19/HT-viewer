@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>arenadetails.xml</FileName>
+  <Version>1.7</Version>
+  <UserID>13358568</UserID>
+  <FetchedDate>2026-03-31 05:48:45</FetchedDate>
+  <Arena>
+    <ArenaID>2812724</ArenaID>
+    <ArenaName>Patio del fin del mundo</ArenaName>
+    <ArenaImage>//res.hattrick.org/arenas/default/12000/custom-220-100.jpg</ArenaImage>
+    <ArenaFallbackImage>//res.hattrick.org/arenas/default/12000/custom-220-100.jpg</ArenaFallbackImage>
+    <Team>
+      <TeamID>2815981</TeamID>
+      <TeamName>Bonsai style</TeamName>
+    </Team>
+    <League>
+      <LeagueID>7</LeagueID>
+      <LeagueName>Argentina</LeagueName>
+    </League>
+    <Region>
+      <RegionID>88</RegionID>
+      <RegionName>Tierra del Fuego, Antártida e Islas del Atlántico </RegionName>
+    </Region>
+    <CurrentCapacity>
+      <RebuiltDate Available="False" />
+      <Terraces>8000</Terraces>
+      <Basic>3000</Basic>
+      <Roof>1000</Roof>
+      <VIP>200</VIP>
+      <Total>12200</Total>
+    </CurrentCapacity>
+    <ExpandedCapacity Available="True">
+      <ExpansionDate>2026-04-04 15:42:15</ExpansionDate>
+      <Terraces>1500</Terraces>
+      <Basic>1000</Basic>
+      <Roof>1500</Roof>
+      <VIP>300</VIP>
+      <Total>4300</Total>
+    </ExpandedCapacity>
+  </Arena>
+</HattrickData>

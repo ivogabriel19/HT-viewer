@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>matches.xml</FileName>
+  <Version>2.9</Version>
+  <UserID>13358568</UserID>
+  <FetchedDate>2026-03-31 05:50:23</FetchedDate>
+  <IsYouth>False</IsYouth>
+  <Team>
+    <TeamID>2815981</TeamID>
+    <TeamName>Bonsai style</TeamName>
+    <ShortTeamName>Bonsai</ShortTeamName>
+    <League>
+      <LeagueID>7</LeagueID>
+      <LeagueName>Argentina</LeagueName>
+    </League>
+    <LeagueLevelUnit>
+      <LeagueLevelUnitID>26314</LeagueLevelUnitID>
+      <LeagueLevelUnitName>VI.2</LeagueLevelUnitName>
+      <LeagueLevel>6</LeagueLevel>
+    </LeagueLevelUnit>
+    <MatchList>
+      <Match>
+        <MatchID>40180540</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2842474</AwayTeamID>
+          <AwayTeamName>Koolen</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-03 06:37:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>3</HomeGoals>
+        <AwayGoals>1</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>761485437</MatchID>
+        <HomeTeam>
+          <HomeTeamID>1456454</HomeTeamID>
+          <HomeTeamName>Els coixos</HomeTeamName>
+          <HomeTeamNameShortName>coixos</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+          <AwayTeamNameShortName>Bonsai</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-04 12:25:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>9</MatchType>
+        <MatchContextId>0</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>5</HomeGoals>
+        <AwayGoals>0</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>40188752</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2833667</AwayTeamID>
+          <AwayTeamName>SV Ottweiler</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-05 01:04:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>4</HomeGoals>
+        <AwayGoals>2</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>40195689</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2825014</AwayTeamID>
+          <AwayTeamName>sandkullen ff</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-06 13:32:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>6</HomeGoals>
+        <AwayGoals>4</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>759785467</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2539181</AwayTeamID>
+          <AwayTeamName>RCD La Rioja</AwayTeamName>
+          <AwayTeamNameShortName>Rioja</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-08 22:30:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>1</MatchType>
+        <MatchContextId>40533</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>6</HomeGoals>
+        <AwayGoals>3</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>40210509</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2832258</AwayTeamID>
+          <AwayTeamName>Masterplan</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-10 16:57:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>5</HomeGoals>
+        <AwayGoals>1</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>761556572</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>725092</AwayTeamID>
+          <AwayTeamName>casetta in canadà</AwayTeamName>
+          <AwayTeamNameShortName>casetta</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-11 23:25:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>9</MatchType>
+        <MatchContextId>0</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>1</HomeGoals>
+        <AwayGoals>5</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>40222715</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2817510</AwayTeamID>
+          <AwayTeamName>Olybiek</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-13 04:46:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>6</HomeGoals>
+        <AwayGoals>0</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>40273996</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2739306</AwayTeamID>
+          <AwayTeamName>FC Chisorian</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-15 03:50:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>3</HomeGoals>
+        <AwayGoals>1</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>759785468</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2779888</HomeTeamID>
+          <HomeTeamName>Athletico San Juan</HomeTeamName>
+          <HomeTeamNameShortName>Athletico</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+          <AwayTeamNameShortName>Bonsai</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-15 22:30:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>1</MatchType>
+        <MatchContextId>40533</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>1</HomeGoals>
+        <AwayGoals>10</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>40326573</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2805301</AwayTeamID>
+          <AwayTeamName>FSV Babelsberg74</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-17 10:54:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>4</HomeGoals>
+        <AwayGoals>5</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>40465246</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName></HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2812691</AwayTeamID>
+          <AwayTeamName>FC Orangutan</AwayTeamName>
+          <AwayTeamNameShortName></AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-18 22:56:00</MatchDate>
+        <SourceSystem>HTOIntegrated</SourceSystem>
+        <MatchType>62</MatchType>
+        <MatchContextId>1258085</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>5</HomeGoals>
+        <AwayGoals>0</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>761644038</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>504135</AwayTeamID>
+          <AwayTeamName>Church Street Brawlers</AwayTeamName>
+          <AwayTeamNameShortName>Brawlers</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-18 23:25:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>9</MatchType>
+        <MatchContextId>0</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>0</HomeGoals>
+        <AwayGoals>1</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>761769706</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2828825</AwayTeamID>
+          <AwayTeamName>Simon Bolivar Football </AwayTeamName>
+          <AwayTeamNameShortName>Football</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-22 22:00:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>9</MatchType>
+        <MatchContextId>0</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>5</HomeGoals>
+        <AwayGoals>4</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>761866494</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2630949</AwayTeamID>
+          <AwayTeamName>Staaten Eylandt United</AwayTeamName>
+          <AwayTeamNameShortName>Staaten</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-25 23:25:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>9</MatchType>
+        <MatchContextId>0</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>3</HomeGoals>
+        <AwayGoals>4</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>762110088</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>931839</AwayTeamID>
+          <AwayTeamName>Team kca</AwayTeamName>
+          <AwayTeamNameShortName>Team</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-03-29 22:00:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>9</MatchType>
+        <MatchContextId>0</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <HomeGoals>6</HomeGoals>
+        <AwayGoals>1</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>762125412</MatchID>
+        <HomeTeam>
+          <HomeTeamID>3222912</HomeTeamID>
+          <HomeTeamName>Ñuñorco</HomeTeamName>
+          <HomeTeamNameShortName>Ñuñorco</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+          <AwayTeamNameShortName>Bonsai</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-04-01 23:10:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>3</MatchType>
+        <MatchContextId>2</MatchContextId>
+        <CupLevel>1</CupLevel>
+        <CupLevelIndex>1</CupLevelIndex>
+        <OrdersGiven>True</OrdersGiven>
+        <Status>UPCOMING</Status>
+      </Match>
+      <Match>
+        <MatchID>764903600</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2884438</HomeTeamID>
+          <HomeTeamName>Lugano caba fc</HomeTeamName>
+          <HomeTeamNameShortName>Lugano</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+          <AwayTeamNameShortName>Bonsai</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-04-05 22:00:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>1</MatchType>
+        <MatchContextId>26314</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <OrdersGiven>False</OrdersGiven>
+        <Status>UPCOMING</Status>
+      </Match>
+      <Match>
+        <MatchID>764903601</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>3232441</AwayTeamID>
+          <AwayTeamName>los pamas</AwayTeamName>
+          <AwayTeamNameShortName>pamas</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-04-12 22:00:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>1</MatchType>
+        <MatchContextId>26314</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <OrdersGiven>False</OrdersGiven>
+        <Status>UPCOMING</Status>
+      </Match>
+      <Match>
+        <MatchID>764903602</MatchID>
+        <HomeTeam>
+          <HomeTeamID>215565</HomeTeamID>
+          <HomeTeamName>Bocasit</HomeTeamName>
+          <HomeTeamNameShortName>Bocasit</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2815981</AwayTeamID>
+          <AwayTeamName>Bonsai style</AwayTeamName>
+          <AwayTeamNameShortName>Bonsai</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-04-19 22:00:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>1</MatchType>
+        <MatchContextId>26314</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <OrdersGiven>False</OrdersGiven>
+        <Status>UPCOMING</Status>
+      </Match>
+      <Match>
+        <MatchID>764903609</MatchID>
+        <HomeTeam>
+          <HomeTeamID>2815981</HomeTeamID>
+          <HomeTeamName>Bonsai style</HomeTeamName>
+          <HomeTeamNameShortName>Bonsai</HomeTeamNameShortName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>2839695</AwayTeamID>
+          <AwayTeamName>2 de abril Humahuaca</AwayTeamName>
+          <AwayTeamNameShortName>Humahuaca</AwayTeamNameShortName>
+        </AwayTeam>
+        <MatchDate>2026-04-26 22:00:00</MatchDate>
+        <SourceSystem>Hattrick</SourceSystem>
+        <MatchType>1</MatchType>
+        <MatchContextId>26314</MatchContextId>
+        <CupLevel>0</CupLevel>
+        <CupLevelIndex>0</CupLevelIndex>
+        <OrdersGiven>False</OrdersGiven>
+        <Status>UPCOMING</Status>
+      </Match>
+    </MatchList>
+  </Team>
+</HattrickData>

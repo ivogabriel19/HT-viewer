@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>leaguedetails.xml</FileName>
+  <Version>1.6</Version>
+  <UserID>13358568</UserID>
+  <FetchedDate>2026-03-31 05:50:01</FetchedDate>
+  <LeagueID>7</LeagueID>
+  <LeagueName>Argentina</LeagueName>
+  <LeagueLevel>6</LeagueLevel>
+  <MaxLevel>7</MaxLevel>
+  <LeagueLevelUnitID>26314</LeagueLevelUnitID>
+  <LeagueLevelUnitName>VI.2</LeagueLevelUnitName>
+  <CurrentMatchRound>1</CurrentMatchRound>
+  <Rank>151</Rank>
+  <Team>
+    <UserId>12108816</UserId>
+    <TeamID>215565</TeamID>
+    <TeamName>Bocasit</TeamName>
+    <Position>1</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+  <Team>
+    <UserId>14102854</UserId>
+    <TeamID>498274</TeamID>
+    <TeamName>Serrucho de goma F.C.</TeamName>
+    <Position>2</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+  <Team>
+    <UserId>14416466</UserId>
+    <TeamID>2699416</TeamID>
+    <TeamName>Boca de Chivilcoy</TeamName>
+    <Position>3</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+  <Team>
+    <UserId>14522050</UserId>
+    <TeamID>2839695</TeamID>
+    <TeamName>2 de abril Humahuaca</TeamName>
+    <Position>4</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+  <Team>
+    <UserId>14597959</UserId>
+    <TeamID>3232441</TeamID>
+    <TeamName>los pamas</TeamName>
+    <Position>5</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+  <Team>
+    <UserId>14544421</UserId>
+    <TeamID>2862372</TeamID>
+    <TeamName>Pongan Huevo FC</TeamName>
+    <Position>6</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+  <Team>
+    <UserId>0</UserId>
+    <TeamID>2884438</TeamID>
+    <TeamName>Lugano caba fc</TeamName>
+    <Position>7</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+  <Team>
+    <UserId>13358568</UserId>
+    <TeamID>2815981</TeamID>
+    <TeamName>Bonsai style</TeamName>
+    <Position>8</Position>
+    <PositionChange>0</PositionChange>
+    <Matches>0</Matches>
+    <GoalsFor>0</GoalsFor>
+    <GoalsAgainst>0</GoalsAgainst>
+    <Points>0</Points>
+    <Won>0</Won>
+    <Draws>0</Draws>
+    <Lost>0</Lost>
+  </Team>
+</HattrickData>
