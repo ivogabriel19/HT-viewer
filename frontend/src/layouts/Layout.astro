@@ -1,0 +1,64 @@
+---
+const { title = "HT Viewer" } = Astro.props
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>HT Viewer</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/team">Team details</a>
+        <a href="/players">Players</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1f2a30;
+    color: #e6e6e6;
+  }
+
+  .header {
+    background: #2f3e46;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #84a98c;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 18px;
+    color: #cad2c5;
+  }
+
+  nav a {
+    margin-left: 15px;
+    color: #84a98c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    padding: 20px;
+  }
+</style>

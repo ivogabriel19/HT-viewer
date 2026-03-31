@@ -1,0 +1,286 @@
+---
+import MainLayout from "../layouts/Layout.astro";
+
+const res = await fetch("http://localhost:3000/api/player/analysis");
+const players = await res.json();
+
+const getWidth = (value: number) => `${(value / 20) * 100}%`;
+
+const posColor = (pos: string) => {
+  switch (pos) {
+    case "GK":
+      return "#ffd166";
+    case "DEF":
+      return "#6c8ae4";
+    case "MID":
+      return "#84a98c";
+    case "FW":
+      return "#e76f51";
+    default:
+      return "#ccc";
+  }
+};
+
+const formation = Astro.url.searchParams.get("formation") || "4-4-2";
+
+const lineupRes = await fetch(
+  `http://localhost:3000/api/player/lineup?formation=${formation}`,
+);
+const { lineup, chemistry } = await lineupRes.json();
+---
+
+<MainLayout title="Players">
+  <h1>Plantel</h1>
+
+  <div class="grid">
+    {
+      players.map((p: any) => (
+        <div class="card">
+          <div class="header">
+            <h3>
+              {p.FirstName} {p.LastName}
+            </h3>
+            <span
+              class="pos"
+              style={`background:${posColor(p.analysis.bestPosition)}`}
+            >
+              {p.analysis.bestPosition}
+            </span>
+          </div>
+
+          <div class="meta">
+            <span>Edad: {p.Age}</span>
+            <span>TSI: {p.TSI}</span>
+          </div>
+
+          <div class="skills">
+            {[
+              ["DEF", p.DefenderSkill],
+              ["PM", p.PlaymakerSkill],
+              ["WING", p.WingerSkill],
+              ["PASS", p.PassingSkill],
+              ["SCOR", p.ScorerSkill],
+              ["GK", p.KeeperSkill],
+            ].map(([label, val]) => (
+              <div class="skill">
+                <span>{label}</span>
+                <div class="bar">
+                  <div class="fill" style={`width:${getWidth(val)}`} />
+                </div>
+                <span>{val}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="rating">⭐ {p.analysis.bestRating.toFixed(1)}</div>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="lineup">
+    <span class="lineupSelect">
+      <form method="GET" action="/players">
+        <select name="formation" onchange="this.form.submit()">
+          <option value="4-4-2" selected={formation === "4-4-2"}>4-4-2</option>
+          <option value="3-5-2" selected={formation === "3-5-2"}>3-5-2</option>
+          <option value="4-3-3" selected={formation === "4-3-3"}>4-3-3</option>
+        </select>
+      </form>
+
+      <p>Química del equipo: {chemistry}</p>
+    </span>
+
+    <h2>XI Ideal ({formation})</h2>
+
+    <div class="pitch">
+      <div class="line gk">
+        {
+          lineup.GK.map((p) => (
+            <div class="player">
+              {p.LastName}
+              <small>{p.analysis.role}</small>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="line def">
+        {
+          lineup.DEF.map((p) => (
+            <div class="player">
+              {p.LastName}
+              <small>{p.analysis.role}</small>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="line mid">
+        {
+          lineup.MID.map((p) => (
+            <div class="player">
+              {p.LastName}
+              <small>{p.analysis.role}</small>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="line fw">
+        {
+          lineup.FW.map((p) => (
+            <div class="player">
+              {p.LastName}
+              <small>{p.analysis.role}</small>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    
+  </div>
+</MainLayout>
+
+<style>
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    background: #2f3e46;
+    border: 1px solid #52796f;
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.1s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pos {
+    background: #84a98c;
+    color: #1f2a30;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .meta {
+    font-size: 12px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skills {
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+
+  .rating {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffd166;
+  }
+
+  .skill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .bar {
+    flex: 1;
+    height: 6px;
+    background: #1f2a30;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .fill {
+    height: 100%;
+    background: #84a98c;
+  }
+
+  .lineup {
+    margin: 30px 0;
+    padding: 15px;
+    background: #2f3e46;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .line {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mini {
+    background: #52796f;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .lineupSelect {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    & select {
+      background: #1f2a30;
+      color: #84a98c;
+      border: 1px solid #52796f;
+      border-radius: 4px;
+      padding: 5px 8px;
+    }
+  }
+
+  .pitch {
+    margin-top: 20px;
+    background: linear-gradient(#2d6a4f, #1b4332);
+    border: 2px solid #95d5b2;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .line {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #081c15;
+    color: #95d5b2;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .player small {
+    font-size: 10px;
+    opacity: 0.7;
+  }
+</style>

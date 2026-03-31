@@ -1,0 +1,70 @@
+---
+import MainLayout from "../layouts/Layout.astro"
+
+const res = await fetch("http://localhost:3000/api/team/summary")
+const { team, topPlayer, newestPlayer } = await res.json()
+---
+
+<MainLayout title="Home">
+  <div class="team-header">
+    <img src={team.LogoURL} alt="logo" class="logo" />
+    <div>
+      <h2>{team.TeamName}</h2>
+      <p>{team.Region?.RegionName} - {team.Country?.CountryName}</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Team Info</h3>
+      <p><strong>Estadio:</strong> {team.Arena?.ArenaName}</p>
+      <p><strong>Fanclub:</strong> {team.Fanclub?.FanclubSize}</p>
+      <p><strong>Power:</strong> {team.PowerRating?.PowerRating}</p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Mejor jugador (TSI)</h3>
+      <p>{topPlayer.FirstName} {topPlayer.LastName}</p>
+      <p>TSI: {topPlayer.TSI}</p>
+    </div>
+
+    <div class="card">
+      <h3>🆕 Última incorporacion</h3>
+      <p>{newestPlayer.FirstName} {newestPlayer.LastName}</p>
+      <p>Desde: {newestPlayer.ArrivalDate}</p>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .team-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .card {
+    background: #2f3e46;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #52796f;
+  }
+
+  h3 {
+    margin-top: 0;
+    color: #84a98c;
+  }
+</style>
