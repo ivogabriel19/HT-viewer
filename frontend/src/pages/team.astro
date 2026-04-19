@@ -1,37 +1,39 @@
 ---
 import MainLayout from "../layouts/Layout.astro"
 
-const res = await fetch("http://localhost:3000/api/team")
-const teams = await res.json()
+const cookie = Astro.request.headers.get("cookie") ?? ""
+
+const res = await fetch("http://localhost:3000/api/team", {
+  headers: { Cookie: cookie },
+})
+
+if (res.status === 401) return Astro.redirect("/login")
+
+const payload = await res.json()
+if (!res.ok) throw new Error(`API error: ${payload.error ?? res.status}`)
+
+const teams = payload
 const team = teams[0]
 ---
 
 <MainLayout title="Team Detail">
   <h2>{team.TeamName}</h2>
 
-  <img src={team.LogoURL} class="logo" />
-
   <div class="card">
     <p><strong>ID:</strong> {team.TeamID}</p>
-    <p><strong>Fundado:</strong> {team.FoundedDate}</p>
-    <p><strong>País:</strong> {team.Country?.CountryName}</p>
     <p><strong>Región:</strong> {team.Region?.RegionName}</p>
     <p><strong>Liga:</strong> {team.League?.LeagueName}</p>
-    <p><strong>División:</strong> {team.LeagueLevelUnit?.LeagueLevelUnitName}</p>
+    <p><strong>División:</strong> {team.LeagueLevelUnit?.LeagueLevelUnitName} (Nivel {team.LeagueLevelUnit?.LeagueLevel})</p>
     <p><strong>Estadio:</strong> {team.Arena?.ArenaName}</p>
     <p><strong>Ranking Global:</strong> {team.PowerRating?.GlobalRanking}</p>
     <p><strong>Ranking Liga:</strong> {team.PowerRating?.LeagueRanking}</p>
-    <p><strong>Fanclub:</strong> {team.Fanclub?.FanclubSize}</p>
-    <p><strong>Victorias:</strong> {team.NumberOfVictories}</p>
+    <p><strong>Power Rating:</strong> {team.PowerRating?.PowerRating}</p>
+    <p><strong>Victorias:</strong> {team.NumberOfVictories?.["#text"] ?? team.NumberOfVictories}</p>
+    <p><strong>Invicto:</strong> {team.NumberOfUndefeated?.["#text"] ?? team.NumberOfUndefeated}</p>
   </div>
 </MainLayout>
 
 <style>
-  .logo {
-    width: 120px;
-    margin-bottom: 15px;
-  }
-
   .card {
     background: #2f3e46;
     padding: 15px;

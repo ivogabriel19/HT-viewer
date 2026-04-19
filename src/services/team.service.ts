@@ -1,53 +1,36 @@
-import { Team } from "../types/team.types"
 import { xmlToJson } from "../utils/xmlToJson"
-import { readXmlFile } from "../utils/readXmlFile"
+import { fetchFromChpp } from "../utils/hattrickClient"
+import { HtTokenPayload } from "../middleware/auth.middleware"
 
-let teams: Team[] = []
-
-export const getTeams = () => {
-  const xmlData = readXmlFile("data/team.xml")
-
+export const getTeams = async ({ accessToken, accessTokenSecret }: HtTokenPayload) => {
+  const xmlData = await fetchFromChpp("teamdetails", accessToken, accessTokenSecret)
   const parsed = xmlToJson<any>(xmlData)
-
-  const teams = parsed?.HattrickData?.Teams?.Team
-
-  if (!teams) {
-    throw new Error("Teams not found in XML")
-  }
-
+  const teams = parsed?.HattrickData?.Team
+  if (!teams) throw new Error("Teams not found in API response")
   return Array.isArray(teams) ? teams : [teams]
 }
 
-export const getTeamSummary = () => {
-  // TEAM
-  const teamXml = readXmlFile("data/team.xml")
-  const teamParsed = xmlToJson<any>(teamXml)
-  const team = teamParsed?.HattrickData?.Teams?.Team
+export const getTeamSummary = async (token: HtTokenPayload) => {
+  const [teamXml, playersXml] = await Promise.all([
+    fetchFromChpp("teamdetails", token.accessToken, token.accessTokenSecret),
+    fetchFromChpp("players",     token.accessToken, token.accessTokenSecret),
+  ])
 
-  // PLAYERS
-  const playersXml = readXmlFile("data/players.xml")
-  const playersParsed = xmlToJson<any>(playersXml)
-  const rawPlayers = playersParsed?.HattrickData?.Team?.PlayerList?.Player
+  const team = xmlToJson<any>(teamXml)?.HattrickData?.Team
+  const rawPlayers = xmlToJson<any>(playersXml)?.HattrickData?.Team?.PlayerList?.Player
+
+  if (!team || !rawPlayers) throw new Error("Missing data from CHPP API")
 
   const players = Array.isArray(rawPlayers) ? rawPlayers : [rawPlayers]
 
-  if (!team || !players) {
-    throw new Error("Missing data")
-  }
-
-  // 🥇 jugador con mayor TSI
   const topPlayer = players.reduce((max: any, p: any) =>
     Number(p.TSI) > Number(max.TSI) ? p : max
   )
 
-  // 🆕 jugador más nuevo
+  // CHPP players API doesn't include ArrivalDate — use highest PlayerID as proxy for most recent signing
   const newestPlayer = players.reduce((latest: any, p: any) =>
-    new Date(p.ArrivalDate) > new Date(latest.ArrivalDate) ? p : latest
+    Number(p.PlayerID) > Number(latest.PlayerID) ? p : latest
   )
 
-  return {
-    team,
-    topPlayer,
-    newestPlayer,
-  }
+  return { team, topPlayer, newestPlayer }
 }

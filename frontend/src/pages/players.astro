@@ -1,32 +1,39 @@
 ---
 import MainLayout from "../layouts/Layout.astro";
 
-const res = await fetch("http://localhost:3000/api/player/analysis");
-const players = await res.json();
+const cookie = Astro.request.headers.get("cookie") ?? ""
+
+const formation = Astro.url.searchParams.get("formation") || "4-4-2";
+
+const [analysisRes, lineupRes] = await Promise.all([
+  fetch("http://localhost:3000/api/player/analysis", { headers: { Cookie: cookie } }),
+  fetch(`http://localhost:3000/api/player/lineup?formation=${formation}`, { headers: { Cookie: cookie } }),
+])
+
+if (analysisRes.status === 401 || lineupRes.status === 401) {
+  return Astro.redirect("/login")
+}
+
+const playersPayload = await analysisRes.json()
+if (!analysisRes.ok) throw new Error(`API error: ${playersPayload.error ?? analysisRes.status}`)
+
+const lineupPayload = await lineupRes.json()
+if (!lineupRes.ok) throw new Error(`API error: ${lineupPayload.error ?? lineupRes.status}`)
+
+const players = playersPayload
+const { lineup, chemistry } = lineupPayload
 
 const getWidth = (value: number) => `${(value / 20) * 100}%`;
 
 const posColor = (pos: string) => {
   switch (pos) {
-    case "GK":
-      return "#ffd166";
-    case "DEF":
-      return "#6c8ae4";
-    case "MID":
-      return "#84a98c";
-    case "FW":
-      return "#e76f51";
-    default:
-      return "#ccc";
+    case "GK":   return "#ffd166";
+    case "DEF":  return "#6c8ae4";
+    case "MID":  return "#84a98c";
+    case "FW":   return "#e76f51";
+    default:     return "#ccc";
   }
 };
-
-const formation = Astro.url.searchParams.get("formation") || "4-4-2";
-
-const lineupRes = await fetch(
-  `http://localhost:3000/api/player/lineup?formation=${formation}`,
-);
-const { lineup, chemistry } = await lineupRes.json();
 ---
 
 <MainLayout title="Players">
@@ -38,7 +45,7 @@ const { lineup, chemistry } = await lineupRes.json();
         <div class="card">
           <div class="header">
             <h3>
-              {p.FirstName} {p.LastName}
+              {p.PlayerName}
             </h3>
             <span
               class="pos"
@@ -96,7 +103,7 @@ const { lineup, chemistry } = await lineupRes.json();
     <div class="pitch">
       <div class="line gk">
         {
-          lineup.GK.map((p) => (
+          lineup.GK.map((p: any) => (
             <div class="player">
               {p.LastName}
               <small>{p.analysis.role}</small>
@@ -107,7 +114,7 @@ const { lineup, chemistry } = await lineupRes.json();
 
       <div class="line def">
         {
-          lineup.DEF.map((p) => (
+          lineup.DEF.map((p: any) => (
             <div class="player">
               {p.LastName}
               <small>{p.analysis.role}</small>
@@ -118,7 +125,7 @@ const { lineup, chemistry } = await lineupRes.json();
 
       <div class="line mid">
         {
-          lineup.MID.map((p) => (
+          lineup.MID.map((p: any) => (
             <div class="player">
               {p.LastName}
               <small>{p.analysis.role}</small>
@@ -129,7 +136,7 @@ const { lineup, chemistry } = await lineupRes.json();
 
       <div class="line fw">
         {
-          lineup.FW.map((p) => (
+          lineup.FW.map((p: any) => (
             <div class="player">
               {p.LastName}
               <small>{p.analysis.role}</small>
@@ -138,7 +145,7 @@ const { lineup, chemistry } = await lineupRes.json();
         }
       </div>
     </div>
-    
+
   </div>
 </MainLayout>
 

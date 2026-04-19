@@ -1,5 +1,9 @@
 ---
 const { title = "HT Viewer" } = Astro.props
+
+const cookie = Astro.request.headers.get("cookie") ?? ""
+const authRes = await fetch("http://localhost:3000/auth/status", { headers: { Cookie: cookie } })
+const { authenticated } = await authRes.json()
 ---
 
 <html lang="es">
@@ -15,6 +19,10 @@ const { title = "HT Viewer" } = Astro.props
         <a href="/">Home</a>
         <a href="/team">Team details</a>
         <a href="/players">Players</a>
+        {authenticated
+          ? <a href="http://localhost:3000/auth/logout" id="logout" class="auth-link logout">Desconectar</a>
+          : <a href="/login" class="auth-link login">Conectar Hattrick</a>
+        }
       </nav>
     </header>
 
@@ -23,6 +31,14 @@ const { title = "HT Viewer" } = Astro.props
     </main>
   </body>
 </html>
+
+<script>
+  document.getElementById("logout")?.addEventListener("click", async (e) => {
+    e.preventDefault()
+    await fetch("http://localhost:3000/auth/logout", { method: "POST", credentials: "include" })
+    window.location.href = "/login"
+  })
+</script>
 
 <style>
   body {
@@ -56,6 +72,23 @@ const { title = "HT Viewer" } = Astro.props
 
   nav a:hover {
     text-decoration: underline;
+  }
+
+  .auth-link {
+    margin-left: 20px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+
+  .auth-link.login {
+    background: #84a98c;
+    color: #1f2a30 !important;
+  }
+
+  .auth-link.logout {
+    background: #52796f;
+    color: #cad2c5 !important;
   }
 
   .container {

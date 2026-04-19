@@ -1,16 +1,25 @@
 ---
 import MainLayout from "../layouts/Layout.astro"
 
-const res = await fetch("http://localhost:3000/api/team/summary")
-const { team, topPlayer, newestPlayer } = await res.json()
+const cookie = Astro.request.headers.get("cookie") ?? ""
+
+const res = await fetch("http://localhost:3000/api/team/summary", {
+  headers: { Cookie: cookie },
+})
+
+if (res.status === 401) return Astro.redirect("/login")
+
+const payload = await res.json()
+if (!res.ok) throw new Error(`API error: ${payload.error ?? res.status}`)
+
+const { team, topPlayer, newestPlayer } = payload
 ---
 
 <MainLayout title="Home">
   <div class="team-header">
-    <img src={team.LogoURL} alt="logo" class="logo" />
     <div>
       <h2>{team.TeamName}</h2>
-      <p>{team.Region?.RegionName} - {team.Country?.CountryName}</p>
+      <p>{team.Region?.RegionName} — {team.League?.LeagueName}</p>
     </div>
   </div>
 
@@ -18,20 +27,21 @@ const { team, topPlayer, newestPlayer } = await res.json()
     <div class="card">
       <h3>Team Info</h3>
       <p><strong>Estadio:</strong> {team.Arena?.ArenaName}</p>
-      <p><strong>Fanclub:</strong> {team.Fanclub?.FanclubSize}</p>
+      <p><strong>División:</strong> {team.LeagueLevelUnit?.LeagueLevelUnitName}</p>
       <p><strong>Power:</strong> {team.PowerRating?.PowerRating}</p>
+      <p><strong>Victorias:</strong> {team.NumberOfVictories?.["#text"] ?? team.NumberOfVictories}</p>
     </div>
 
     <div class="card">
       <h3>🔥 Mejor jugador (TSI)</h3>
-      <p>{topPlayer.FirstName} {topPlayer.LastName}</p>
+      <p>{topPlayer.PlayerName}</p>
       <p>TSI: {topPlayer.TSI}</p>
     </div>
 
     <div class="card">
-      <h3>🆕 Última incorporacion</h3>
-      <p>{newestPlayer.FirstName} {newestPlayer.LastName}</p>
-      <p>Desde: {newestPlayer.ArrivalDate}</p>
+      <h3>🆕 Última incorporación</h3>
+      <p>{newestPlayer.PlayerName}</p>
+      <p>ID: {newestPlayer.PlayerID}</p>
     </div>
   </div>
 </MainLayout>
@@ -42,12 +52,6 @@ const { team, topPlayer, newestPlayer } = await res.json()
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
-  }
-
-  .logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 6px;
   }
 
   .grid {

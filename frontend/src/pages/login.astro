@@ -1,0 +1,50 @@
+---
+import MainLayout from "../layouts/Layout.astro"
+---
+
+<MainLayout title="Conectar Hattrick">
+  <div class="login-box">
+    <h2>Conectá tu cuenta de Hattrick</h2>
+    <p>Para ver tu equipo y jugadores necesitás autorizar el acceso.</p>
+    <a href="http://localhost:3000/auth/login" class="btn">
+      Conectar con Hattrick
+    </a>
+  </div>
+</MainLayout>
+
+<style>
+  .login-box {
+    max-width: 400px;
+    margin: 80px auto;
+    text-align: center;
+    background: #2f3e46;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #52796f;
+  }
+
+  h2 {
+    color: #84a98c;
+    margin-top: 0;
+  }
+
+  p {
+    color: #cad2c5;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #84a98c;
+    color: #1f2a30;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .btn:hover {
+    background: #cad2c5;
+  }
+</style>
